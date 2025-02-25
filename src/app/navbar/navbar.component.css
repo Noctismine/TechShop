@@ -1,0 +1,53 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    padding-inline: 35px;  
+
+
+
+}
+
+.logincart{
+    display: flex;
+    gap: 20px;
+}
+
+.login{
+    display: flex;
+}
+
+.cart{
+    display: flex;
+}
+
+.fa-user{
+    border-radius: 100%;
+    margin-right: 5px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login > h3{
+    font-size: 15px;
+}
+
+.navbtns{
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+   
+}
+
+.navbtns > li {
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 19px;
+}
+
+
+.navbtns > li:hover {
+    color: blueviolet;
+}
