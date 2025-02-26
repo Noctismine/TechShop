@@ -10,6 +10,7 @@
 <section class="herotwo" >
 
     <div class="smalls1" >
+        
         <p>Holiday Deals</p>
         <h1>Up to <br> 30% off</h1>
         <p>Selected Smartphone brands</p>
@@ -17,10 +18,13 @@
     </div>
 
     <div class="smalls2" >
+
+        <div class="smalls2info">
         <p>Just in</p>
         <h1>Take Your <br> Sound <br> Anywhere</h1> 
         <p>Top Headphone Brands</p>
         <button>Shop</button>
+    </div>
     </div>
 
 </section>
@@ -102,44 +106,29 @@
 
 </section>
 
-
-<section class="slide" >
-
-  <div>
-
-    <div class="slideHero">
-
-    <h1>Best Sellers</h1>
-
-
-        <div class="gallery js-flickity  "
-            data-flickity-options='{ "wrapAround": true }'>
-          @for (item of cards.products; track $index) {
-             <div class="gallery-cell ">
-                <div class="productCard">
-                    <img [src]="item.images[0]" alt="">
-                    <p class="title" >{{item.title}}</p>
-                   
-                    <div class="priceBar">
-                        @if (item.price.beforeDiscount > item.price.current) {
-                            <p class="beforeDiscount">${{item.price.beforeDiscount }}</p>
-                            <p class="currentPrice">${{item.price.current}}</p>
-                        }
-                        @else {
-                            <p class="currentPrice">${{item.price.current}}</p>
-                        }
+<section class="slide">
+    <div class="slideHerotop">
+        <div class="slideHero">
+            @for (item of cards.products; track $index) {
+                <div class="gallery-cell centerCard">
+                    <div class="productCard">
+                        <div>
+                            <img class="cardImg" [src]="item.images[0]" alt="">
+                            <p class="cardname">{{item.title}}</p>
+                            <div class="priceBar">
+                                @if (item.price.beforeDiscount > item.price.current) {
+                                    <p class="beforeDiscount">${{item.price.beforeDiscount }}</p>
+                                    <p class="currentPrice">${{item.price.current}}</p>
+                                }
+                                @else {
+                                    <p class="currentPrice">${{item.price.current}}</p>
+                                }
+                            </div>
+                        </div>
                     </div>
                 </div>
-             </div>
-          }
+            }
         </div>
-
-
-
-        
-
-    <button class="view" >View All</button>
-
-</div>
-</div>
+        <button class="seeall" routerLink="/products">View All</button>
+    </div>
 </section>

@@ -1,33 +1,35 @@
-<div>
-    <div class="nav" >
+<nav>
+    <div class="top">
+        <h1 id="mainName" routerLink="/">TechShop</h1>
+        <ul class="navigation">
+            <li><a routerLink="/">Home</a></li>
+            <li><a>Best Sellers</a></li>
+            <li><a routerLink="/products">Products</a></li>
+        </ul>
         <div>
-            <h1>TechShed</h1>
-        </div>
-            <ul class="navbtns" >
-                <li routerLink="">Home</li>
-                
-                <li >  Best Sellers</li>
-                <li routerLink="products" >Products</li>
-            </ul>
-       
-        <div class="logincart" >
-            <div class="login" >
+            <div class="login first">
                 <i class="fa-solid fa-user"></i>
-                <h3>Log In</h3>
+                <p>Login In</p>
             </div>
-
-            <div class="cart" >
+            <div class="cart first">
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
+            <i class="fa-solid fa-bars burgerbar" (click)="switch()"></i>
         </div>
-
-    
+        <div class="responsive" [ngClass]="navbar ? 'show' : 'none' ">
+            <ul class="navigation">
+                <li><a routerLink="/">Home</a></li>
+                <li><a routerLink="/products">Products</a></li>
+            </ul>
+            <div>
+                <div class="login">
+                    <i class="fa-solid fa-user"></i>
+                    <p>Login In</p>
+                </div>
+                <div class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-
-</div>
-
-
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</nav>
