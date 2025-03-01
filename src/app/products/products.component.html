@@ -7,8 +7,9 @@
 
        
             @for (item of brendebi; track $index) {
-                <p>{{item}}</p>
+                <p (click)="getBrandBy(item)" >{{item}}</p>
             }
+
         </div>
 
         <form class="filter">
@@ -16,10 +17,11 @@
 
             <p>Price</p>
             <label for="minPrice">Min</label>
-            <input id="minPrice" type="number">
+            <input id="minPrice" type="number" name="minPrice">
 
             <label for="maxPrice">Max</label>
-            <input id="maxPrice" type="number">
+            <input id="maxPrice" type="number" name="maxPrice">
+
 
             <button class="btn" type="submit">Apply</button>
         </form>
