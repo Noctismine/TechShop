@@ -3,7 +3,7 @@
         <p>Best Prices</p>
         <p>Incredible Prices on All Your Favorite Items</p>
         <p>Get more for less on selected brands</p>
-        <button routerLink="/products" >Shop Now</button>
+        <button [routerLink]="['/products']" >Shop Now</button>
     </section>
 </div>
 
@@ -14,7 +14,7 @@
         <p>Holiday Deals</p>
         <h1>Up to <br> 30% off</h1>
         <p>Selected Smartphone brands</p>
-        <button routerLink="/products" >Shop</button>
+        <button [routerLink]="['/products']" >Shop</button>
     </div>
 
     <div class="smalls2" >
@@ -23,7 +23,7 @@
         <p>Just in</p>
         <h1>Take Your <br> Sound <br> Anywhere</h1> 
         <p>Top Headphone Brands</p>
-        <button routerLink="/products" >Shop</button>
+        <button [routerLink]="['/products']" >Shop</button>
     </div>
     </div>
 
@@ -132,6 +132,6 @@
                 </div>
             }
         </div>
-        <button class="seeall" routerLink="/products">View All</button>
+        <button class="seeall" [routerLink]="['/products']">View All</button>
     </div>
 </section>
