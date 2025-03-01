@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -13,12 +14,13 @@ export class HomeComponent {
    this.getCards()
   }
 
-  cards: any;
+  cards: any = [];
+ 
   
  
     getCards(){
       this.api.getCardById(1 , 10 ).subscribe(  (data) =>  {
-          console.log(data);
+          
           this.cards = data
       })
     }

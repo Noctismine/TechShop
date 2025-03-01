@@ -1,15 +1,38 @@
-<p>products works!</p>
+<div class="hero">
+    <section>
+        <div class="broswe">
+            <h2>Browse by</h2>
+          
+            <button class="btn" (click)="drawAllproducts()">All Products</button>
 
+       
+            @for (item of brendebi; track $index) {
+                <p>{{item}}</p>
+            }
+        </div>
 
+        <form class="filter">
+            <h2>Filter by</h2>
 
+            <p>Price</p>
+            <label for="minPrice">Min</label>
+            <input id="minPrice" type="number">
 
+            <label for="maxPrice">Max</label>
+            <input id="maxPrice" type="number">
 
+            <button class="btn" type="submit">Apply</button>
+        </form>
+    </section>
 
-
-
-
-
-
-
-
-
+    <section class="productebihero">
+       
+        @for (item of producebi.products; track $index) {
+            <div class="productebi">
+                <img class="cardImg" [src]="item.images[0]" alt="{{item.title}}">
+                <p class="cardname">{{item.title}}</p>
+                <p class="price">{{item.price.current}}$</p>
+            </div>
+        }
+    </section>
+</div>

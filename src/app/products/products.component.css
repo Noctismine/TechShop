@@ -1,0 +1,226 @@
+.broswe {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-inline: 40px;
+    margin-top: 30px;
+    color: black;
+    max-width: 150px;
+    width: 100%;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    max-width: 100px;
+    width: 100%;
+    gap: 5px;
+    margin-inline: 40px;
+    margin-top: 30px;
+}
+
+.btn {
+    background-color: #751FFF;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #751FFF;
+    transition: 0.5s;
+    color: white;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #751FFF;
+    border-radius: 20px;
+    border: 2px solid #751FFF;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+}
+
+.cardImg {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.productebihero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.productebi {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    height: 330px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+}
+
+.productebi:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cardname {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.productebi p {
+    font-size: 14px;
+    color: #888;
+}
+
+.productebi .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #751FFF;
+    margin-top: 10px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #751FFF;
+    box-shadow: 0 0 5px rgba(117, 31, 255, 0.5);
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 50%;
+    gap: 10px;
+}
+
+.filter button {
+    margin-top: 15px;
+}
+
+.broswe p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #751FFF;
+    margin: 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.broswe p:hover {
+    color: #333;
+    transform: scale(1.05);
+}
+
+.filter p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #751FFF;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.filter p:hover {
+    color: #333;
+    transform: scale(1.05);
+}
+
+@media (max-width: 540px) {
+    .broswe p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .filter p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    input[type="number"] {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .filter {
+        width: 100%;
+        margin-inline: 20px;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .broswe, .filter {
+        margin-inline: 0px; 
+        max-width: 100%; 
+    }
+
+    .broswe h2, .filter h2 {
+        font-size: 18px; 
+        text-align: center;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .productebi {
+        width: 100%; 
+        max-width: 300px; 
+        margin-bottom: 20px;
+    }
+
+    .cardImg {
+        width: 100%; 
+        height: 200px;
+    }
+}
