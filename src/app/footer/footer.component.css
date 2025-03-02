@@ -1,9 +1,9 @@
 
 
 
-/* FOOTER DESIGN */
+
 .footer {
-    background: #1D1E2C; /* Dark Theme */
+    background: #1D1E2C; 
     color: #E0E0E0;
     text-align: center;
     padding: 40px 20px 15px;
@@ -11,7 +11,7 @@
     margin-top: 30px;
 }
 
-/* Payment Icons */
+
 .payment-methods {
     display: flex;
     flex-wrap: wrap;
@@ -34,7 +34,7 @@
     box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
 }
 
-/* Divider Line */
+
 .footer-divider {
     width: 85%;
     border: none;
@@ -43,7 +43,7 @@
     margin: 25px auto;
 }
 
-/* Footer Bottom */
+
 .footer-bottom {
     font-size: 14px;
     color: #AAA;
