@@ -1,150 +1,235 @@
+
 nav {
     position: sticky;
     top: 0;
     width: 100%;
     background-color: white;
-    z-index: 2;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 10px 0;
 }
 
+
 #mainName {
-    font-size: 42px;
-    font-weight: 700;
+    font-size: 38px;
+    font-weight: 800;
     color: #751FFF;
     letter-spacing: 2px;
     cursor: pointer;
     text-transform: uppercase;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease-in-out;
 }
 
 #mainName:hover {
     color: #333;
+    transform: scale(1.05);
 }
+
 
 .top {
     display: flex;
-    height: 75px;
+    height: 60px;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 70px;
+    padding: 0 40px;
 }
 
-.top > div {
-    display: flex;
-    gap: 30px;
-}
-
-.navigation > li {
-    cursor: pointer;
-    transition: 0.3s ease;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #333;
-}
-
-.navigation > li:hover {
-    color: #751FFF;
-}
-
-.login {
-    display: flex;
-    gap: 5px;
-    font-weight: 300;
-}
-
-.fa-user {
-    border-radius: 100%;
-    font-size: 18px;
-    color: #751FFF;
-}
 
 .navigation {
     display: flex;
-    list-style-type: none;
-    gap: 20px;
-    color: black;
-    text-decoration: none;
+    list-style: none;
+    gap: 25px;
+}
+
+.navigation li {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.navigation li:hover {
+    color: #751FFF;
 }
 
 .navigation a {
-    list-style-type: none;
-    color: black;
     text-decoration: none;
+    color: inherit;
 }
+
+
+.top > div {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.login, .cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+.login:hover, .cart:hover {
+    background: rgba(117, 31, 255, 0.1);
+}
+
+.fa-user, .fa-cart-shopping {
+    font-size: 20px;
+    color: #751FFF;
+}
+
+
+.cart {
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.cart i {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.cart:hover i {
+    color: #751FFF;
+}
+
 
 .responsive {
-    padding-top: 20px;
-    z-index: 2;
     position: fixed;
-    display: flex;
-    flex-direction: column;
-    right: -200px;
-    top: 70px;
-    background-color: white;
+    top: 0;
+    right: -100%;
+    width: 300px;
     height: 100vh;
-    width: 200px;
-    align-items: center;
-    text-align: center;
-    transition: 0.5s;
-}
-
-.responsive > div {
-    display: flex;
-    gap: 10px;
-}
-
-.responsive #navigation {
+    background: white;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    transition: right 0.4s ease-in-out;
+    z-index: 200;
 }
 
-.show {
+
+.responsive.show {
     right: 0;
 }
 
-.none {
-    right: -200px;
+
+.responsive .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #751FFF;
+    transition: color 0.3s ease;
 }
+
+.responsive .close-btn:hover {
+    color: #333;
+}
+
+.responsive ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.responsive ul li {
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.responsive ul li:hover {
+    color: #751FFF;
+}
+
+
+.responsive .responsive-icons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+.responsive .login,
+.responsive .cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background 0.3s ease-in-out;
+    width: 80%;
+    justify-content: center;
+}
+
+.responsive .login:hover,
+.responsive .cart:hover {
+    background: rgba(117, 31, 255, 0.1);
+}
+
 
 .burgerbar {
-    display: none !important;
-    font-size: 30px;
+    display: none;
+    font-size: 28px;
     color: #751FFF;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
-@media only screen and (max-width: 760px) {
-    .first {
-        display: none !important;
-    }
+.burgerbar:hover {
+    transform: scale(1.1);
+}
 
-    .navigation:nth-child(2) {
-        display: none !important;
-    }
 
-    .show {
-        display: flex !important;
-        right: 0;
-    }
-
-    .burgerbar {
-        display: flex !important;
+@media only screen and (max-width: 1000px) {
+    .top {
+        padding: 0 40px;
     }
 
     .navigation {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        font-size: 20px;
+        display: none;
     }
 
-    .top {
-        padding-inline: 30px;
+    .burgerbar {
+        display: block;
+    }
+
+    .login, .cart {
+        display: none;
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     #mainName {
-        font-size: 36px;
+        font-size: 32px;
+    }
+
+    .top {
+        padding: 0 20px;
+    }
+
+    .responsive {
+        width: 100%;
+        text-align: center;
     }
 }

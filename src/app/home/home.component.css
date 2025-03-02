@@ -17,6 +17,7 @@
     align-items: center;
     border-radius: 10px;
     margin-bottom: 20px;
+    
 }
 
 .indexSection > p:nth-child(2){
@@ -300,7 +301,15 @@
       align-items: center;
       text-align: center;
   }
-  
+  .indexSection > p:nth-child(2) {
+    text-align: center;
+    color: white;
+  }
+
+  .indexSection > p:nth-child(3) {
+    text-align: center;
+    color: white;
+}
 
   .hero{
       justify-content: center;

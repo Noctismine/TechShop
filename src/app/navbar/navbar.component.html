@@ -6,29 +6,36 @@
             <li><a>Best Sellers</a></li>
             <li><a routerLink="/products">Products</a></li>
         </ul>
-        <div>
-            <div class="login first">
+        <div class="menu-icons">
+            <div class="login first" routerLink="/login">
                 <i class="fa-solid fa-user"></i>
-                <p>Login In</p>
+                <p>Login</p>
             </div>
             <div class="cart first">
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
-            <i class="fa-solid fa-bars burgerbar" (click)="switch()"></i>
+        
+            <i class="fa-solid fa-bars burgerbar" (click)="toggleMenu()"></i>
         </div>
-        <div class="responsive" [ngClass]="navbar ? 'show' : 'none' ">
-            <ul class="navigation">
-                <li><a routerLink="/">Home</a></li>
-                <li><a routerLink="/products">Products</a></li>
-            </ul>
-            <div>
-                <div class="login">
-                    <i class="fa-solid fa-user"></i>
-                    <p>Login In</p>
-                </div>
-                <div class="cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
+    </div>
+    
+
+    <div class="responsive" [ngClass]="navbar ? 'show' : ''">
+
+        <span class="close-btn" (click)="toggleMenu()">×</span>
+
+        <ul class="navigation">
+            <li><a routerLink="/" (click)="toggleMenu()">Home</a></li>
+            <li><a routerLink="/products" (click)="toggleMenu()">Products</a></li>
+        </ul>
+
+        <div class="responsive-icons">
+            <div class="login" routerLink="/login" (click)="toggleMenu()">
+                <i class="fa-solid fa-user"></i>
+                <p>Login</p>
+            </div>
+            <div class="cart" (click)="toggleMenu()">
+                <i class="fa-solid fa-cart-shopping"></i>
             </div>
         </div>
     </div>
