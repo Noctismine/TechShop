@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -25,5 +26,18 @@ export class ApiService {
   getBrandById( name : string ){
     return this.api.get(`https://api.everrest.educata.dev/shop/products/brand/${name}`)
   }
+
+  search( name : string ){
+    return this.api.get(`https://api.everrest.educata.dev/shop/products/search?keywords=${name}`)
+  }
+
+  price( minPrice : number , maxPrice : number){
+    return this.api.get(`https://api.everrest.educata.dev/shop/products/search?price_min=${minPrice}&price_max=${maxPrice}`)
+  }
+
+  getProductsById( id : string ){
+    return this.api.get(`https://api.everrest.educata.dev/shop/products/id/${id}`)
+  }
+
 
 }

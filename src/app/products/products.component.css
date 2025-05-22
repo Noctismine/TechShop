@@ -66,7 +66,7 @@
 .productebi {
     border: 2px solid #ddd;
     border-radius: 10px;
-    height: 330px;
+    height: 360px;
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -135,6 +135,7 @@ label {
     max-width: 100%;
     width: 50%;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 .filter button {
@@ -154,7 +155,7 @@ label {
 
 .broswe p:hover {
     color: #333;
-    transform: scale(1.05);
+
 }
 
 .filter p {
@@ -167,9 +168,48 @@ label {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.filter p:hover {
+
+
+
+.broswe p.selected {
     color: #333;
-    transform: scale(1.05);
+    font-weight: bold;
+}
+
+.search {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto; 
+}
+
+.search input[type="search"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search input[type="search"]:focus {
+    outline: none;
+    border-color: #751FFF;  
+    box-shadow: 0 0 5px rgba(117, 31, 255, 0.5); 
+}
+
+
+@media (max-width: 540px) {
+    .search {
+        max-width: 100%;  
+        margin: 15px 20px; 
+    }
+
+    .search input[type="search"] {
+        padding: 12px; 
+        font-size: 14px;  
+    }
 }
 
 @media (max-width: 540px) {
@@ -221,7 +261,7 @@ label {
     }
 
     .cardImg {
-        width: 100%; 
+        width: 90%; 
         height: 200px;
     }
 }

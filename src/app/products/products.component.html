@@ -2,39 +2,50 @@
     <section>
         <div class="broswe">
             <h2>Browse by</h2>
-          
             <button class="btn" (click)="drawAllproducts()">All Products</button>
 
-       
-            @for (item of brendebi; track $index) {
-                <p (click)="getBrandBy(item)" >{{item}}</p>
+            @for (item of brendebi; track $index ) {
+                <p (click)="selectBrand(item)" [class.selected]="selectedBrandIndex === item" (click)="getBrandBy(item)">
+                    {{item}}
+                </p>
             }
-
         </div>
 
-        <form class="filter">
+        <form (ngSubmit)="priceFilter()"  class="filter">
             <h2>Filter by</h2>
 
             <p>Price</p>
             <label for="minPrice">Min</label>
-            <input id="minPrice" type="number" name="minPrice">
+            <input [(ngModel)]="minPrice"  id="minPrice" type="number" name="minPrice">
 
             <label for="maxPrice">Max</label>
-            <input id="maxPrice" type="number" name="maxPrice">
-
+            <input [(ngModel)]="maxPrice"  id="maxPrice" type="number" name="maxPrice">
 
             <button class="btn" type="submit">Apply</button>
+
         </form>
     </section>
 
+
+
     <section class="productebihero">
-       
+        
+
+        <div class="search" >
+            <input [(ngModel)]="search"  (keyup.enter)="searchiiii(search)"  type="search" placeholder="search" >
+        </div>
+
+
+    <div class="productebihero" >
         @for (item of producebi.products; track $index) {
-            <div class="productebi">
-                <img class="cardImg" [src]="item.images[0]" alt="{{item.title}}">
+            <div class="productebi" routerLink="/details/{{item._id}}"  >
+                <img class="cardImg" [src]="item.thumbnail" alt="{{item.title}}">
                 <p class="cardname">{{item.title}}</p>
                 <p class="price">{{item.price.current}}$</p>
             </div>
+        
         }
+
+    </div>
     </section>
 </div>

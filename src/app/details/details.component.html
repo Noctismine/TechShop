@@ -1,0 +1,21 @@
+<div class="product-wrapper">
+    <div class="product-container">
+      <h1 class="product-title">{{ productebiinfo.title }}</h1>
+  
+
+      <button class="slider-btn" id="prev-btn" (click)="prevImage()" ><</button>
+  
+
+      <div class="image-wrapper">
+
+        <img class="thumbnail" [src]="productebiinfo.images[currentImageIndex]" alt="Product Image">
+      </div>
+
+      <button class="slider-btn" id="next-btn" (click)="nextImage()" >></button>
+  
+      <div class="rating">⭐ {{ productebiinfo.rating }} / 5</div>
+      <div class="price">$ {{ productebiinfo.price.current }}</div>
+      <p class="description">{{ productebiinfo.description }}</p>
+    </div>
+  </div>
+  
