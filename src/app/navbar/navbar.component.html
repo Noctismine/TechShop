@@ -1,42 +1,40 @@
 <nav>
-    <div class="top">
-        <h1 id="mainName" routerLink="/">TechShop</h1>
-        <ul class="navigation">
-            <li><a routerLink="/">Home</a></li>
-            <li><a>Best Sellers</a></li>
-            <li><a routerLink="/products">Products</a></li>
-        </ul>
-        <div class="menu-icons">
-            <div class="login first" routerLink="/login">
-                <i class="fa-solid fa-user"></i>
-                <p>Login</p>
-            </div>
-            <div routerLink="/cart"  class="cart first">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </div>
-        
-            <i class="fa-solid fa-bars burgerbar" (click)="toggleMenu()"></i>
-        </div>
+  <div class="top">
+    <h1 id="mainName" routerLink="/">TechShop</h1>
+    <ul class="navigation">
+      <li><a routerLink="/">Home</a></li>
+
+      <li><a routerLink="/products">Products</a></li>
+    </ul>
+    <div class="menu-icons">
+      <div class="login first" routerLink="/login">
+        <i class="fa-solid fa-user"></i>
+        <p>Login</p>
+      </div>
+      <div routerLink="/cart" class="cart first">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+
+      <i class="fa-solid fa-bars burgerbar" (click)="toggleMenu()"></i>
     </div>
-    
+  </div>
 
-    <div class="responsive" [ngClass]="navbar ? 'show' : ''">
+  <div class="responsive" [ngClass]="navbar ? 'show' : ''">
+    <span class="close-btn" (click)="toggleMenu()">×</span>
 
-        <span class="close-btn" (click)="toggleMenu()">×</span>
+    <ul class="navigation">
+      <li><a routerLink="/" (click)="toggleMenu()">Home</a></li>
+      <li><a routerLink="/products" (click)="toggleMenu()">Products</a></li>
+    </ul>
 
-        <ul class="navigation">
-            <li><a routerLink="/" (click)="toggleMenu()">Home</a></li>
-            <li><a routerLink="/products" (click)="toggleMenu()">Products</a></li>
-        </ul>
-
-        <div class="responsive-icons">
-            <div class="login" routerLink="/login" (click)="toggleMenu()">
-                <i  class="fa-solid fa-user"></i>
-                <p>Login</p>
-            </div>
-            <div  class="cart" (click)="toggleMenu()">
-                <i    class="fa-solid fa-cart-shopping"></i>
-            </div>
-        </div>
+    <div class="responsive-icons">
+      <div class="login" routerLink="/login" (click)="toggleMenu()">
+        <i class="fa-solid fa-user"></i>
+        <p>Login</p>
+      </div>
+      <div class="cart" (click)="toggleMenu()">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
     </div>
+  </div>
 </nav>
